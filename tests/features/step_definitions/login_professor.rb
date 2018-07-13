@@ -5,7 +5,9 @@ Dado("que eu acesso a página inicial") do
 end
 
 Quando("eu faço login com {string} e {string}") do |email, senha|
- @loginP.Logar(email,senha)
+ @email = email
+ @senha = senha
+ @loginP.Logar(@email,@senha)
 end
 
 Então("vejo a {string}") do |mensagem|

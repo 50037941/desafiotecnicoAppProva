@@ -1,10 +1,15 @@
+require 'securerandom'
+
 Dado("que eu acesse a pagina princial") do                                   
   visit 'http://homolog.fund.appprova.com.br/users/sign_in'
 end                                                                          
                                                                              
-Quando("prechendo os cadastro de cadastro") do                               
+Quando("prechendo os cadastro de cadastro") do      
+  @nomeAleatorio = SecureRandom.hex (6) 
+  @email = @nomeAleatorio << '@gmail.com'                     
   @Aluno = CadastroAluno.new
-  @Aluno.Cadastro('Patrcik','patrick@gmail.com','123456','123456')
+  @Aluno.Cadastro('Patrick', @email,'123456','123456')
+  puts email
 end                                                                          
                                                                              
 Entao("devo possui um acesso ao sistema") do                                 

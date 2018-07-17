@@ -9,7 +9,7 @@ Quando("prechendo os cadastro de cadastro") do
   @email = @nomeAleatorio << '@gmail.com'                     
   @Aluno = CadastroAluno.new
   @Aluno.Cadastro('Patrick', @email,'123456','123456')
-  puts email
+  puts @email
 end                                                                          
                                                                              
 Entao("devo possui um acesso ao sistema") do                                 

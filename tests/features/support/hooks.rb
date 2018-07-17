@@ -13,3 +13,9 @@ Before('@loginAluno') do
     @Aluno = CadastroAluno.new
     @Aluno.Cadastro('Patrick', @email,'123456','123456')
 end
+
+Before('@editarPerfil') do 
+    visit 'http://homolog.fund.appprova.com.br/users/edit'
+    @EditaPerfil = PerfilAluno.new
+    @EditaPerfil.Editar('Minas Gerais','Belo Horizonte','AppProva','9º Ano')
+end

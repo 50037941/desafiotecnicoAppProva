@@ -19,7 +19,7 @@ class SimiladoPage < SitePrism::Page
     element :rascunho, '#save_as_draft_button'
 
 
-    def PublicarQuestao()
+    def Questao(acao)
         botao_simulado.click
         nome_simulado.set 'TestePatrick'
         proximo.click
@@ -33,7 +33,12 @@ class SimiladoPage < SitePrism::Page
         button_buscar.click
         adicionar_questao.click
         click_on('Próximo')
-        publicar.click
+        if acao = 'publicar'
+            publicar.click
+        else
+            rascunho.click
+        end
     end
 
+    
 end

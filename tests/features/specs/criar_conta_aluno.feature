@@ -2,7 +2,7 @@
 
 @criarContaAluno
 Funcionalidade: Criar uma conta de aluno
-
+#Casos de testes - Criação de usuario
     Esquema do Cenario: Criar conta
     Dado que eu acesse a pagina princial
     Quando prechendo os campos '<nome>', '<email>','<senha>','<confirma>' cadastro de cadastro

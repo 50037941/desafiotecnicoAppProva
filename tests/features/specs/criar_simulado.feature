@@ -2,14 +2,14 @@
 
 @simulado
 Funcionalidade: Fluxo de criação de um simulado
-#@rascunho
-#@login
-#Cenario: Salvar simulado como rascunho e publica-lo
-#    Dado que eu acesse a página de criação de simulado
-#    Quando eu realizar todos os passos para 'rascunho'
-#    Então vejo a mensagem "Simulado salvo como rascunho!"
-#    E publico o simulado
-#@criar
+@rascunho
+@login
+Cenario: Salvar simulado como rascunho e publica-lo
+    Dado que eu acesse a página de criação de simulado
+    Quando eu realizar todos os passos para 'rascunho'
+    Então vejo a mensagem "Simulado salvo como rascunho!"
+    E publico o simulado
+@criar
 @login
 Cenario: Criar simulado
     Dado que eu acesse a página de criação de simulado

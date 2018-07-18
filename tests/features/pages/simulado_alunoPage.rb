@@ -32,7 +32,5 @@ class SimuladoAluno < SitePrism::Page
         entregaSimulado.click
     end
 
-    def ResponderSemPerfil()
-        iniciarSimuladoAutomatizadoSemPerfil.click
-    end
+    
 end

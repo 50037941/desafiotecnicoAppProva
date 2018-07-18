@@ -20,6 +20,7 @@ class SimiladoPage < SitePrism::Page
     element :nomeRascunho, '#q_name_cont'
     element :buscarSimulado, 'button[name="button"]'
     element :publicarRascunho, '#publish-button'
+    element :editarRascunho, '#edit-button'
 
     def Questao(acao)
         botao_simulado.click
@@ -34,14 +35,12 @@ class SimiladoPage < SitePrism::Page
         button_buscar.click
         adicionar_questao.click
         click_on('Próximo')
-
-        
-        find('#start_time__time').set '00:30'
-        find('.picker__holder').click
-        sleep(2)  
-        find('#end_time__time').set '00:40'
-        find('.picker__holder').click
-        
+        sleep(3)
+        page.execute_script("$('#start_time__date').val('21/07/2018')")
+        page.execute_script("$('#start_time__time').val('03:00')")
+        page.execute_script("$('#end_time__date').val('25/07/2018')")
+        page.execute_script("$('#end_time__time').val('04:00')")
+        sleep(5)
         if acao.eql?('publicar')
             publicar.click
         else
@@ -54,11 +53,14 @@ class SimiladoPage < SitePrism::Page
         buscarSimulado.click
         sleep(2)  
         first('.long-text.main-long-text').click_link('TestePatrick')
-        publicarRascunho.click 
+        editarRascunho.click
+        page.execute_script("$('#start_time__date').val('21/07/2018')")
+        page.execute_script("$('#start_time__time').val('03:00')")
+        page.execute_script("$('#end_time__date').val('25/07/2018')")
+        page.execute_script("$('#end_time__time').val('04:00')")
+        publicar.click 
         
-        within('#publish-modal')do
-            click_link 'OK'
-        end
+        
     end
 
     

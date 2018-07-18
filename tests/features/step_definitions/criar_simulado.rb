@@ -16,5 +16,6 @@ Então("vejo a mensagem {string}") do |mensagem|
 end
 
 Então("publico o simulado") do
-  pending # Write code here that turns the phrase above into concrete actions
+  @simulado.PublicarRascunho()
+  expect(page).to have_content mensagem
 end

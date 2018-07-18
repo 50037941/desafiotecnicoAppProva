@@ -2,6 +2,7 @@
 
 @simulado
 Funcionalidade: Fluxo de criação de um simulado
+@rascunho
 @login
 Cenario: Salvar simulado como rascunho e publica-lo
     Dado que eu acesse a página de criação de simulado

@@ -2,6 +2,7 @@ class SimuladoAluno < SitePrism::Page
     set_url '/'
 
     element :iniciarSimuladoAutomatizado, 'button[data-mock-id="170"]'
+    element :iniciarSimuladoAutomatizadoSemPerfil, 'button[data-mock-id="183"]'
     element :modalComecar, '#welcome-content'
     element :comecarSimulado, '#btn_start_mock'
     element :alternativa1, '.letter', :text  => 'b)'
@@ -29,5 +30,9 @@ class SimuladoAluno < SitePrism::Page
         alternativa1.click
         responderPergunta.click
         entregaSimulado.click
+    end
+
+    def ResponderSemPerfil()
+        iniciarSimuladoAutomatizadoSemPerfil.click
     end
 end

@@ -1,4 +1,4 @@
-# Projeto-Automaçaõ
+# Projeto-Automação
 
 Desafio técnico - AppProva
 

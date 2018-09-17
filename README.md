@@ -1,6 +1,5 @@
 # Projeto-Automação
 
-Desafio técnico - AppProva
 
 Tecnologias utilizadas:
 Ruby, 
